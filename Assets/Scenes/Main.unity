@@ -18509,6 +18509,10 @@ PrefabInstance:
       propertyPath: judgementArea
       value: 
       objectReference: {fileID: 342078757}
+    - target: {fileID: 4197094720183797438, guid: 1e192a4488f088441b4b7b8074a6dc21, type: 3}
+      propertyPath: textEffectPrefab
+      value: 
+      objectReference: {fileID: 2623533130611147997, guid: 44a2b7e9ed9834a4aab37745cf7a3482, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e192a4488f088441b4b7b8074a6dc21, type: 3}
 --- !u!4 &2839529857975563866 stripped
@@ -18544,6 +18548,10 @@ PrefabInstance:
       propertyPath: judgementArea
       value: 
       objectReference: {fileID: 1499320486}
+    - target: {fileID: 2839529859076356569, guid: fa2b8e24a2e94914b9d2a0a474ee7c90, type: 3}
+      propertyPath: textEffectPrefab
+      value: 
+      objectReference: {fileID: 2623533130611147997, guid: 44a2b7e9ed9834a4aab37745cf7a3482, type: 3}
     - target: {fileID: 2839529859076356578, guid: fa2b8e24a2e94914b9d2a0a474ee7c90, type: 3}
       propertyPath: m_Name
       value: JudgeMentAreaB
@@ -18779,6 +18787,10 @@ PrefabInstance:
       propertyPath: judgementArea
       value: 
       objectReference: {fileID: 2135748737}
+    - target: {fileID: 5395296437955477865, guid: f2f37ba234dadfa499353caba2326aed, type: 3}
+      propertyPath: textEffectPrefab
+      value: 
+      objectReference: {fileID: 2623533130611147997, guid: 44a2b7e9ed9834a4aab37745cf7a3482, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2f37ba234dadfa499353caba2326aed, type: 3}
 --- !u!1 &9070280867519442649 stripped

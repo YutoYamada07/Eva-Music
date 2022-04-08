@@ -18,6 +18,8 @@ public class JudgementArea : MonoBehaviour
     public AudioClip sound1;
     AudioSource audioSource;
 
+    [SerializeField] GameObject textEffectPrefab;
+
 
     public LayerMask m_layerMask;
 
@@ -31,7 +33,7 @@ public class JudgementArea : MonoBehaviour
         {
             //Debug.Log("S‚ð“ü—Í");
             GetComponent<ParticleSystem>().Play();
-            audioSource.PlayOneShot(sound1);
+            //audioSource.PlayOneShot(sound1);
 
             //var hit = Physics.CapsuleCast(transform.position,transform.position,2.5f,Vector3.zero);
 
@@ -65,38 +67,45 @@ public class JudgementArea : MonoBehaviour
                     if (distance < 3)
                     {
                         gameManager.Combo();
+                        SpawnTextEffect("Excellent",transform.position);
                         point = Score();
                         judgePoint = 1.2f;
                         gameManager.AddScore(point * judgePoint * AsukaPoint);
+                        
                     }
                     else if (distance < 5)
                     {
                         gameManager.Combo();
+                        SpawnTextEffect("Good", transform.position);
                         judgePoint = 1.1f;
                         point = Score();
                         gameManager.AddScore(point * judgePoint * AsukaPoint);
+
                     }
                     else
                     {
                         gameManager.Combo();
+                        SpawnTextEffect("Bad", transform.position);
                         judgePoint = 1.0f;
                         point = Score();
                         gameManager.AddScore(point * judgePoint * AsukaPoint);
                     }
                     Destroy(hit.collider.gameObject);
                 }
-                
-                    
-                   
-                    
-
-                
-                
+              
                 
             }
             
 
         }
+    }
+    void SpawnTextEffect(string message,Vector3 position)
+    {
+        
+        GameObject effect = Instantiate(textEffectPrefab, position+Vector3.down*1.5f, Quaternion.identity);
+        JudgementEffect judgementEffect =effect.GetComponent<JudgementEffect>();
+        judgementEffect.SetText(message);
+        
     }
     void Asuka()
     {

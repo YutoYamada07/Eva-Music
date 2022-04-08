@@ -8,6 +8,8 @@ public class NoteGenerator : MonoBehaviour
     [SerializeField] GameObject generateObject = default;
     [SerializeField] GameObject notePrefab;
 
+    
+
     public void SpawnNote(GameObject note,Vector3 pos)
     {
         Instantiate(note, pos, Quaternion.identity);
